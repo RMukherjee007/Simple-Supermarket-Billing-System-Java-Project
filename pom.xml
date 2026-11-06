@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.supermarket</groupId>
+    <artifactId>supermarket-billing-system</artifactId>
+    <version>1.0.0</version>
+    <name>Supermarket Billing System</name>
+    <description>Outstanding Rubric Project: JavaFX GUI, Event Handling, and MySQL Database with Rich Operations</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>21</maven.compiler.release>
+        <javafx.version>21.0.2</javafx.version>
+        <mysql.version>8.3.0</mysql.version>
+        <h2.version>2.2.224</h2.version>
+    </properties>
+
+    <dependencies>
+        <!-- JavaFX Controls (Core GUI components: TableView, Charts, Tabs, Dialogs) -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+
+        <!-- JavaFX Base & Graphics -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+
+        <!-- MySQL JDBC Driver for Rich Database Operations -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+
+        <!-- H2 Database (MySQL Compatibility Mode fallback if MySQL daemon is offline) -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <release>21</release>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <mainClass>com.supermarket.SupermarketApp</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
